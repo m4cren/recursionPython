@@ -23,6 +23,24 @@ def postorder_traversal(root):
           postorder_traversal(root.right)    
           print(root.value, end = " ")
 
+def preorder_traversal_swap(root):
+     if root:
+
+
+          print(root.value, end = " ")
+
+          swapped = []
+
+          first = preorder_traversal(root.right)
+          swapped.append(first)
+
+          second = preorder_traversal(root.left)
+          swapped.append(second)
+
+          
+
+
+
 
 root = TreeNode(1)
 
@@ -44,3 +62,7 @@ print('\n')
 print('Post-order Traversal')
 postorder_traversal(root)
 
+
+print('\n')
+print('Pre-order Traversal After Swap')
+preorder_traversal_swap(root)
